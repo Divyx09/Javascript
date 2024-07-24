@@ -4,7 +4,7 @@ const addTodoBtn = document.getElementById("add-todo-btn");
 const todoListElement = document.getElementById("todo-list");
 
 const addTodo = () => {
-  const todoText = todoInput.value;
+  const todoText = todoInput.value.trim();
   if (todoText !== "") {
     const todo = {
       text: todoText,
