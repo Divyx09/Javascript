@@ -57,4 +57,108 @@ console.log("Sorted array " + sort);
 const reverse = technologies.reverse();
 console.log("Reversed array " + reverse);
 
-//to 
+//for of loop to iterate the array
+for (const tech of technologies) {
+  console.log(tech);
+}
+
+//forEach is a method apply on array
+const webTech = [
+  {
+    name: "HTML",
+    years: 1990,
+  },
+  {
+    name: "CSS",
+    years: 1991,
+  },
+  {
+    name: "JavaScript",
+    years: 1995,
+  },
+  {
+    name: "React",
+    years: 2010,
+  },
+  {
+    name: "Angular",
+    years: 2015,
+  },
+  {
+    name: "Vue",
+    years: 2016,
+  },
+];
+webTech.forEach((tech, i) => {
+  console.log(i, tech);
+});
+
+//map method in array
+const webTechs = webTech.map((tech) => tech.name);
+console.log(webTechs);
+
+//filter method
+const webTechs2 = webTech.filter((tech) => tech.years > 2000);
+console.log(webTechs2);
+
+const numbers = [1, 4, 5, 3, 6, 4, 75, 34];
+//largest number in an array
+const largestInArray = (numbers) => {
+  let largestNumber = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > largestNumber) {
+      largestNumber = numbers[i];
+    }
+  }
+  return console.log(largestNumber, "using forLoop");
+};
+largestInArray(numbers);
+
+//largest number in an array using for of loop
+const largestInArray2 = (numbers) => {
+  let largestNumber = numbers[0];
+  for (const number of numbers) {
+    if (number > largestNumber) {
+      largestNumber = number;
+    }
+  }
+  return console.log(largestNumber, "using for of loop");
+};
+largestInArray2(numbers);
+
+//largest number in an array using map method
+const largestInArray3 = (numbers) => {
+  let largestNumber = numbers[0];
+  numbers.map((number) => {
+    if (number > largestNumber) {
+      largestNumber = number;
+    }
+  });
+  return console.log(largestNumber, "using map");
+};
+largestInArray3(numbers);
+
+//largest number in an array using foreach loop
+const largestInArray4 = (numbers) => {
+  let largestNumber = numbers[0];
+  numbers.forEach((number) => {
+    if (number > largestNumber) {
+      largestNumber = number;
+    }
+  });
+  return console.log(largestNumber, "using forEach");
+};
+largestInArray4(numbers);
+
+//reverse an array using function
+const reverseArray = (numbers) => {
+  let reversedArray = [];
+  for (let i = numbers.length - 1; i >= 0; i--) {
+    reversedArray.push(numbers[i]);
+  }
+  return console.log(reversedArray, "using for loop");
+};
+reverseArray(numbers);
+
+// reverse an array using reverse() method
+console.log(numbers.reverse());
