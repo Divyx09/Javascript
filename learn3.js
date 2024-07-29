@@ -162,3 +162,4 @@ reverseArray(numbers);
 
 // reverse an array using reverse() method
 console.log(numbers.reverse());
+
